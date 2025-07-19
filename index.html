@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STRATOS RACING CARD GAME</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  
+</head>
+<body>
+  <img src="STRATOS RACING.png" id="logo" alt="Logo" />
+  <h1 id="l">🏎️ Stratos Overtake 🔥</h1>
+  <div id="message" class="message hidden"></div>
+
+  <div id="game">
+    <div id="top-card"></div>
+    <div id="message-area"></div>
+<hr>
+    <button id="draw-pile" onclick="onDrawCard(); updateUI();">Draw Card</button>
+    <button  id="Restart" onclick="onRestart()">Restart</button>
+    <button id="toggle-music-button"></button> 
+    <h2>Your Hand</h2>
+    <div id="player-hand" class="card-row"></div>
+
+    <h2>AI Hand</h2>
+    <div id="ai-hand" class="card-row"></div>
+
+    
+  </div>
+
+  <!-- Sound effects -->
+  <audio id="draw-sound" src="draw.mp3"></audio>
+  <audio id="play-sound" src="play.mp3"></audio>
+  <audio id="win-sound" src="win.mp3"></audio>
+  <audio id="bg" src="bg.mp3"></audio>
+  <!-- Color Picker Modal -->
+<div id="color-picker" class="hidden">
+    <p>Choose a color:</p>
+    <div class="color-options">
+      <button onclick="chooseColor('red')" class="red">Red</button>
+      <button onclick="chooseColor('green')" class="green">Green</button>
+      <button onclick="chooseColor('blue')" class="blue">Blue</button>
+      <button onclick="chooseColor('yellow')" class="yellow">Yellow</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
